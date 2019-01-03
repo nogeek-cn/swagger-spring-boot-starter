@@ -257,7 +257,7 @@ public interface IReturnCode extends Serializable {
 
 
 
-我特别想吐槽一句，兵熊一个，将熊熊一窝，一个总的 Leader 的设计不怎么样，坑的不是一个人，而是所有的开发都是怎么搞都搞不定。
+我特别想吐槽一句，兵熊一个，将熊熊一窝，一个总的 Leader 的设计不怎么样，坑的不是一个人，而是所有的开发全部被坑了！！！。
 
 
 
@@ -354,7 +354,7 @@ spring.jackson.date-format=yyyy-MM-dd HH:mm:ss:SSS
 
 ​	是不是有些名字都不知道？ 国际化等等。？ 放弃吧，JAVA 真的太难了。发现很多不会？
 
-哈哈哈哈
+哈哈哈
 
 
 
