@@ -6,10 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /***
@@ -25,7 +22,7 @@ public class DarianSwaggerProperties {
      */
     private String[] selectorbasePackages = new String[]{""};
 
-    private Map<String, ParameterProperty> parameterPropertyMap = new HashMap<>();
+    private List<ParameterProperty> parameterPropertyList = new ArrayList<>();
 
     private ApiInfoProperties apiInfo = new ApiInfoProperties();
 
@@ -103,7 +100,7 @@ public class DarianSwaggerProperties {
         /***
          * 是否必填
          */
-        private Boolean required;
+        private Boolean required = false;
         private Boolean allowMultiple;
         /***
          * 指定参数值的类型
@@ -118,7 +115,7 @@ public class DarianSwaggerProperties {
         /***
          * 是否隐藏
          */
-        private Boolean hidden = true;
+        private Boolean hidden = false;
 
         @NoArgsConstructor
         @AllArgsConstructor

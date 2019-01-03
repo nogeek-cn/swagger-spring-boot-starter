@@ -358,13 +358,17 @@ spring.jackson.date-format=yyyy-MM-dd HH:mm:ss:SSS
 
 
 
+##### swagger 基本注解，自行官网查看
+
+
+
 # 生命苦短，放弃 JAVA！！！
 
 # 拒绝 Copy ，多多设计！！！
 
 
 
-
+要做一个酷酷的码农。
 
 
 

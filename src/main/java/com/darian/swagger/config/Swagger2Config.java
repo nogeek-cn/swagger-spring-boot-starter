@@ -18,13 +18,13 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.ApiSelectorBuilder;
 import springfox.documentation.spring.web.plugins.Docket;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
 import static com.darian.swagger.config.DarianSwaggerProperties.*;
 import static com.darian.swagger.config.DarianSwaggerProperties.ApiInfoProperties.*;
+import static com.darian.swagger.config.DarianSwaggerProperties.ParameterProperty.*;
 import static java.util.stream.Collectors.*;
 
 
@@ -114,7 +114,12 @@ public class Swagger2Config {
     }
 
     private ModelRef createModelRef(ParameterProperty parameterProperty) {
-        return new ModelRef(parameterProperty.getModelRef().getType());
+        ModelRefProperty modelRef = parameterProperty.getModelRef();
+        String type = "String";
+        if (modelRef != null) {
+            type = modelRef.getType();
+        }
+        return new ModelRef(type);
     }
 
     /***
@@ -123,7 +128,7 @@ public class Swagger2Config {
      */
     private List<Parameter> createParameterList() {
         List<Parameter> parameterList = darianSwaggerProperties
-                .getParameterPropertyMap().values()
+                .getParameterPropertyList()
                 .stream().map(parameterProperty -> {
                             SwaggerSupportParamType paramTypeEnum = parameterProperty.getParamTypeEnum();
                             String paramTypeString = SwaggerSupportParamType.paramTypeString(paramTypeEnum);
@@ -150,7 +155,7 @@ public class Swagger2Config {
      * @param parameterList
      */
     public void addLanguage(List<Parameter> parameterList) {
-        Optional<ParameterProperty> first = darianSwaggerProperties.getParameterPropertyMap().values()
+        Optional<ParameterProperty> first = darianSwaggerProperties.getParameterPropertyList()
                 .stream()
                 .filter(parameterProperty -> {
                     SwaggerSupportParamType paramTypeEnum = parameterProperty.getParamTypeEnum();
