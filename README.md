@@ -356,9 +356,9 @@ spring.jackson.date-format=yyyy-MM-dd HH:mm:ss:SSS
 
 
 
-##### 生命苦短，放弃 JAVA！！！
+# 生命苦短，放弃 JAVA！！！
 
-##### 拒绝 Copy ，多多设计！！！
+# 拒绝 Copy ，多多设计！！！
 
 
 
