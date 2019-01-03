@@ -8,7 +8,7 @@ public enum SwaggerSupportParamType {
     QUERY;
 
     public static String paramTypeString(SwaggerSupportParamType swaggerSupportParamType) {
-        if (BODY.equals(swaggerSupportParamType)) {
+        if (HEADER.equals(swaggerSupportParamType)) {
             return "header";
         } else if (COOKIE.equals(swaggerSupportParamType)) {
             return "cookie";
