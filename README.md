@@ -222,7 +222,7 @@ public class CustomException extends RuntimeException {
 
 是不是很爽，只需要这一个异常，你可以想干什么干什么。怎么搞都行。
 
-为了代码间接，我添加了 默认实现。
+为了代码**简洁** 以及实现的简单，我添加了 默认实现。
 
 ```java
 /***
